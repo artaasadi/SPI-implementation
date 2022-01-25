@@ -17,7 +17,7 @@ __main
 	
 	LDR R5,=OER
 	STR R4, [R5]
-	STR R10, #1
+	MOV R10, #1
 	
 loop
 	; select slaves
@@ -103,7 +103,7 @@ clock ;clock implementation
 	B delay
 low
 	LDR R2, =2_100000000000
-	LDR R5, =DODR
+	LDR R5, =CODR
 	STR R2, [R5]
 	MOV R10, #1
 
@@ -160,3 +160,6 @@ nine
 	LDR R1, =9
 	MOV R9, #6 ; counter
 	B settled
+	
+here B here
+	END
